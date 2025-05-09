@@ -14,7 +14,7 @@ def cargar_estudiantes (ruta_archivo):
     return estudiantes #Retornamos la lista de estudiantes validos
 
 def mostrar_estudiantes(estudiantes):
-    estudiantes_ordenados=sorted(estudiantes, key=lambda, x: x['nombre']) #Ordenamos la lista de estudiantes por nombre
+    estudiantes_ordenados=sorted(estudiantes, key=lambda x: x['nombre']) #Ordenamos la lista de estudiantes por nombre
     print(f"{'Nombre':<20}{'Nota':<10}") #Imprimimos el encabezado
     for estudiante in estudiantes_ordenados:
         print(f"{estudiante['nombre']:<20}{estudiante['nota']:<10}")
