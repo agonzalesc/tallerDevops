@@ -19,3 +19,11 @@ def mostrar_estudiantes(estudiantes):
     for estudiante in estudiantes_ordenados:
         print(f"{estudiante['nombre']:<20}{estudiante['nota']:<10}")
 
+def calcular_promedio(estudiantes):
+    if not estudiantes: #Si la lista de estudiantes esta vacia
+        return 0.0 #Retornamos 0.0
+    suma=0.0 #Variable para almacenar la suma de las notas
+    for estudiante in estudiantes:
+        suma+=estudiante['nota'] #Sumamos la nota del estudiante a la suma
+    promedio=suma/len(estudiantes) #Calculamos el promedio
+    return promedio #Retornamos el promedio
